@@ -29,3 +29,26 @@ Funcionalidade: Criar, modificar e deletar pets
     Quando deleto esse pet
     Então deve retornar o id do pet deletado
     E o status code da request Petstore deve ser 200
+
+
+@negativoPetsPost
+  Cenário: Criação de pet inválida API Petstore
+    Dado que tenho dados de acesso validos na API Petstore
+    Quando crio um pet com dados invalidos
+    Então deve retornar a mensagem "invalid input"
+    E o status code da request Petstore deve ser 405
+
+@negativoPetsPut
+  Cenário: Modificação pet inválida API Petstore
+    Dado que tenho dados de acesso validos na API Petstore
+    E crio um pet
+    Quando modifico esse pet com dados invalidos
+    Então deve retornar a mensagem "invalid ID supplied"
+    E o status code da request Petstore deve ser 405
+
+@negativoPetsDelete
+  Cenário: Deletar pet com id inválida API Petstore
+    Dado que tenho dados de acesso validos na API Petstore
+    Quando deleto um pet com id invalido
+    Então deve retornar a mensagem "pet not found"
+    E o status code da request Petstore deve ser 400

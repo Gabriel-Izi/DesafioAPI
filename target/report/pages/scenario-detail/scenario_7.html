@@ -78,17 +78,17 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
-      "que tenho dados de acesso validos de usuario na API Petstore",
-      "crio um usuario",
-      "deve retornar o id do usuario criado",
-      "o status code da request userPetstore deve ser 200",
+      "que tenho dados de acesso validos na API Petstore",
+      "crio um pet com dados invalidos",
+      "deve retornar a mensagem \"invalid input\"",
+      "o status code da request Petstore deve ser 405",
       "steps.Hooks.after()"
     ],
     "datasets": [
       {
         "data": [
           0,
-          1,
+          0,
           1,
           0,
           0,
@@ -271,17 +271,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2021-12-30 09:57:39</span>
+            <span class="text-light">2022-01-03 17:22:33</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_2.html">Criar, modificar e deletar usuários</a>
-                        <span class="small">file:src/test/resources/Features/userspetstore.feature</span>
+                            <a href="pages/feature-scenarios/feature_1.html">Criar, modificar e deletar pets</a>
+                        <span class="small">file:src/test/resources/Features/pets.feature</span>
                     </h5>
-                    <h3>Criar usuário API Petstore</h3>
+                    <h3>Criação de pet inválida API Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -299,15 +299,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2021-12-30 09:57:23</li>
-                <li class="list-group-item">Ended on:<br>2021-12-30 09:57:26</li>
-            <li class="list-group-item">Test Runtime:<br>0m 03s 012ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-03 17:22:08</li>
+                <li class="list-group-item">Ended on:<br>2022-01-03 17:22:09</li>
+            <li class="list-group-item">Test Runtime:<br>0m 01s 203ms</li>
             <li class="list-group-item">
-                    <a href="pages/tag-scenarios/tag_userspetstore.html">@userspetstore</a>,
+                    <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_usersPost.html">@usersPost</a>            </li>
+                    <a href="pages/tag-scenarios/tag_negativoPetsPost.html">@negativoPetsPost</a>            </li>
             </div>
         </div>
     </div>
@@ -321,15 +321,15 @@ font-src * data: blob: 'unsafe-inline';"/>
 
                 </li>
                 <li class="list-group-item">
-                    4 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    2 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
-                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
                     <br>
-                    0 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+                    1 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
        title="skipped"><span style="display:none">skipped</span></i>
 
                 </li>
@@ -352,84 +352,9 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.queTenhoDadosDeAcessoValidosDeUsuarioNaAPIPetstore()">
-                                    <a href="pages/step-scenarios/step_2072033425.html"><span
-                                                class="keyword">Dado </span> que tenho dados de acesso validos de usuario na API Petstore</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 01s 224ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>GET https://petstore.swagger.io/v2/user/login?null<br><br>Body : 
-null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br>Params : {password=trundle123, username=Trundle123456}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "logged in user session:1640869043157"
-}<br><br>Tempo de resposta: 1 segundos</div>
-        </div>
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">2.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.crioUmUsuario()">
-                                    <a href="pages/step-scenarios/step_01202195369.html"><span
-                                                class="keyword">Quando </span> crio um usuario</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 01s 766ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/user/null<br><br>Body : 
-{"firstName":"Jeremiah","lastName":"Tromp","password":"3v80hp4h6t","userStatus":1,"phone":"367.156.5478","id":12600,"email":"lacy.armstrong@yahoo.com","username":"Draven"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br>Params : {password=trundle123, username=Trundle123456}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "12600"
-}<br><br>Tempo de resposta: 1 segundos</div>
-        </div>
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.deveRetornarOIdDoUsuarioCriado()">
-                                    <a href="pages/step-scenarios/step_2143366176.html"><span
-                                                class="keyword">Então </span> deve retornar o id do usuario criado</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 021ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">4.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.oStatusCodeDaRequestUserPetstoreDeveSer(int)">
-                                    <a href="pages/step-scenarios/step_1831821676.html"><span
-                                                class="keyword">E </span> o status code da request userPetstore deve ser <span class="parameter">200</span></a>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.que_tenho_dados_de_acesso_validos_na_api_petstore()">
+                                    <a href="pages/step-scenarios/step_1988702256.html"><span
+                                                class="keyword">Dado </span> que tenho dados de acesso validos na API Petstore</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -438,6 +363,84 @@ null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Typ
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">2.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.crioUmPetComDadosInvalidos()">
+                                    <a href="pages/step-scenarios/step_947040257.html"><span
+                                                class="keyword">Quando </span> crio um pet com dados invalidos</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 01s 201ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/pet/null<br><br>Body : 
+{"name":18699,"id":"macaw","category":{"name":"macaw","id":18699},"tags":[{"name":"macaw","id":18699}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 500<br><br>Payload recebido: 
+{
+    "code": 500,
+    "type": "unknown",
+    "message": "something bad happened"
+}<br><br>Tempo de resposta: 1 segundos</div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_failed table-row-failed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">3.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.deveRetornarAMensagem(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0940914214.html"><span
+                                                class="keyword">Então </span> deve retornar a mensagem <span class="parameter">"invalid input"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 002ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">org.opentest4j.AssertionFailedError: Status code diferente do esperado! ==&#62; expected: &#60;invalid input&#62; but was: &#60;something bad happened&#62;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at steps.PetsSteps.deveRetornarAMensagem(PetsSteps.java:138)
+	at &#226;&#339;&#189;.deve retornar a mensagem &#34;invalid input&#34;(<a href='file:///C:/Users/GabrielIzidoriodeOli/Users/GabrielIzidoriodeOli/OneDrive%20-%20Yaman%20Tecnologia%20LTDA/&#195;&#65533;rea%20de%20Trabalho/DesafioAPI/src/test/resources/Features/pets.feature:38)' target='_blank'>file:///C:/Users/GabrielIzidoriodeOli/Users/GabrielIzidoriodeOli/OneDrive%20-%20Yaman%20Tecnologia%20LTDA/&#195;&#65533;rea%20de%20Trabalho/DesafioAPI/src/test/resources/Features/pets.feature:38)</a>
+</pre>
+            </div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">4.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.oStatusCodeDaRequestPetstoreDeveSer(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_01747636482.html"><span
+                                                class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">405</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
                             </div>
 
                         </div>
@@ -452,7 +455,7 @@ null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Typ
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2021-12-30 09:57:39.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
     </div>
 </footer>    </body>
     </html>

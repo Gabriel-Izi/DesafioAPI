@@ -78,26 +78,23 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
-      "que tenho dados de acesso validos de usuario na API Petstore",
-      "crio um usuario",
-      "deleto esse usuario",
-      "deve retornar o username do usuario deletado",
-      "o status code da request userPetstore deve ser 200",
+      "que tenho dados de acesso validos na API Petstore",
+      "deleto um pet com id invalido",
+      "deve retornar a mensagem \"pet not found\"",
+      "o status code da request Petstore deve ser 400",
       "steps.Hooks.after()"
     ],
     "datasets": [
       {
         "data": [
           0,
+          0,
           1,
-          0,
-          0,
           0,
           0,
           0
         ],
         "backgroundColor": [
-          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
@@ -115,11 +112,9 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          0,
           0
         ],
         "backgroundColor": [
-          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
@@ -137,11 +132,9 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          0,
           0
         ],
         "backgroundColor": [
-          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
@@ -278,17 +271,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2021-12-30 09:57:39</span>
+            <span class="text-light">2022-01-03 17:22:33</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_2.html">Criar, modificar e deletar usuários</a>
-                        <span class="small">file:src/test/resources/Features/userspetstore.feature</span>
+                            <a href="pages/feature-scenarios/feature_1.html">Criar, modificar e deletar pets</a>
+                        <span class="small">file:src/test/resources/Features/pets.feature</span>
                     </h5>
-                    <h3>Deletar usuário API Petstore</h3>
+                    <h3>Deletar pet com id inválida API Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -306,15 +299,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2021-12-30 09:57:29</li>
-                <li class="list-group-item">Ended on:<br>2021-12-30 09:57:32</li>
-            <li class="list-group-item">Test Runtime:<br>0m 02s 940ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-03 17:22:11</li>
+                <li class="list-group-item">Ended on:<br>2022-01-03 17:22:13</li>
+            <li class="list-group-item">Test Runtime:<br>0m 01s 203ms</li>
             <li class="list-group-item">
-                    <a href="pages/tag-scenarios/tag_userspetstore.html">@userspetstore</a>,
+                    <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_usersDelete.html">@usersDelete</a>            </li>
+                    <a href="pages/tag-scenarios/tag_negativoPetsDelete.html">@negativoPetsDelete</a>            </li>
             </div>
         </div>
     </div>
@@ -324,19 +317,19 @@ font-src * data: blob: 'unsafe-inline';"/>
             <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                    5         Steps
+                    4         Steps
 
                 </li>
                 <li class="list-group-item">
-                    5 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    2 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
-                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
                     <br>
-                    0 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+                    1 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
        title="skipped"><span style="display:none">skipped</span></i>
 
                 </li>
@@ -359,112 +352,9 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.queTenhoDadosDeAcessoValidosDeUsuarioNaAPIPetstore()">
-                                    <a href="pages/step-scenarios/step_2072033425.html"><span
-                                                class="keyword">Dado </span> que tenho dados de acesso validos de usuario na API Petstore</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 01s 197ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>GET https://petstore.swagger.io/v2/user/login?null<br><br>Body : 
-null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br>Params : {password=trundle123, username=Trundle123456}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "logged in user session:1640869049819"
-}<br><br>Tempo de resposta: 1 segundos</div>
-        </div>
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">2.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.crioUmUsuario()">
-                                    <a href="pages/step-scenarios/step_01202195369.html"><span
-                                                class="keyword">E </span> crio um usuario</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 855ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/user/null<br><br>Body : 
-{"firstName":"Gavin","lastName":"Rosenbaum","password":"9nbt9ak9w9ynyl","userStatus":1,"phone":"099.410.0224","id":13348,"email":"shera.davis@gmail.com","username":"Caitlyn"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br>Params : {password=trundle123, username=Trundle123456}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "13348"
-}<br><br>Tempo de resposta: 0 segundos</div>
-        </div>
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.deletoEsseUsuario()">
-                                    <a href="pages/step-scenarios/step_1698969295.html"><span
-                                                class="keyword">Quando </span> deleto esse usuario</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 872ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/user/Caitlyn<br><br>Body : 
-{"firstName":"Gavin","lastName":"Rosenbaum","password":"9nbt9ak9w9ynyl","userStatus":1,"phone":"099.410.0224","id":13348,"email":"shera.davis@gmail.com","username":"Caitlyn"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br>Params : {password=trundle123, username=Trundle123456}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "code": 200,
-    "type": "unknown",
-    "message": "Caitlyn"
-}<br><br>Tempo de resposta: 0 segundos</div>
-        </div>
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">4.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.deveRetornarOUsernameDoUsuarioDeletado()">
-                                    <a href="pages/step-scenarios/step_86418533.html"><span
-                                                class="keyword">Então </span> deve retornar o username do usuario deletado</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 015ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">5.</span>
-                                <span data-toggle="tooltip" title="steps.UsersPetstoreSteps.oStatusCodeDaRequestUserPetstoreDeveSer(int)">
-                                    <a href="pages/step-scenarios/step_1831821676.html"><span
-                                                class="keyword">E </span> o status code da request userPetstore deve ser <span class="parameter">200</span></a>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.que_tenho_dados_de_acesso_validos_na_api_petstore()">
+                                    <a href="pages/step-scenarios/step_1988702256.html"><span
+                                                class="keyword">Dado </span> que tenho dados de acesso validos na API Petstore</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -473,6 +363,152 @@ null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Typ
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">2.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.deletoUmPetComIdInvalido()">
+                                    <a href="pages/step-scenarios/step_1725782020.html"><span
+                                                class="keyword">Quando </span> deleto um pet com id invalido</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 01s 203ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/-72<br><br>Body : 
+null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
+<br><br>Tempo de resposta: 1 segundos</div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_failed table-row-failed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">3.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.deveRetornarAMensagem(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0940914214.html"><span
+                                                class="keyword">Então </span> deve retornar a mensagem <span class="parameter">"pet not found"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+	at steps.PetsSteps.deveRetornarAMensagem(PetsSteps.java:138)
+	at &#226;&#339;&#189;.deve retornar a mensagem &#34;pet not found&#34;(<a href='file:///C:/Users/GabrielIzidoriodeOli/Users/GabrielIzidoriodeOli/OneDrive%20-%20Yaman%20Tecnologia%20LTDA/&#195;&#65533;rea%20de%20Trabalho/DesafioAPI/src/test/resources/Features/pets.feature:53)' target='_blank'>file:///C:/Users/GabrielIzidoriodeOli/Users/GabrielIzidoriodeOli/OneDrive%20-%20Yaman%20Tecnologia%20LTDA/&#195;&#65533;rea%20de%20Trabalho/DesafioAPI/src/test/resources/Features/pets.feature:53)</a>
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+	at steps.PetsSteps.deveRetornarAMensagem(PetsSteps.java:138)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:110)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:110)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+</pre>
+            </div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">4.</span>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.oStatusCodeDaRequestPetstoreDeveSer(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_01747636482.html"><span
+                                                class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">400</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
                             </div>
 
                         </div>
@@ -487,7 +523,7 @@ null<br><br>Headers : {api_key=special-key, accept=application/json, Content-Typ
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2021-12-30 09:57:39.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
     </div>
 </footer>    </body>
     </html>

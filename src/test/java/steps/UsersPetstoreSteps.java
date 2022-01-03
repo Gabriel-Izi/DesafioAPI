@@ -92,6 +92,8 @@ public class UsersPetstoreSteps extends ApiRequests{
         super.id = userEnviado.getUsername();
         super.DELETE();
 
+        //bug na api apesar funcionar
+        //o delete funciona mas só 50% das vezes por isso foi feito um while
         while(response.getStatusCode() != 200) {
             super.uri = prop.getProp("uri_userpetstore");
             super.id = userEnviado.getUsername();

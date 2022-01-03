@@ -44,6 +44,28 @@ public class ApiBody {
                 .build();
     }
 
+
+    public PetsInvalidosLombok configurandoPetsInvalidos(){
+
+        return PetsInvalidosLombok.builder()
+                .id(faker.animal().name())
+                .name(faker.number().numberBetween(10000, 20000))
+                .build();
+    }
+
+    public PetsInvalidosLombok criandoPetsInvalidos(Integer configPetName, String configPetId){
+
+        return  PetsInvalidosLombok.builder()
+                .id(configPetId)
+                .category(Category.builder().id(configPetName).name(configPetId).build())
+                .name(configPetName)
+//                .photoUrls(setPhotoUrls(faker.internet().avatar()))
+                .tags(setTags(configPetName, configPetId))
+                .status("available")
+                .build();
+    }
+
+
     public List<Tags> setTags(int fakeId, String fakeName) {
         List<Tags> tags = new ArrayList<>();
         var tag = Tags.builder().id(fakeId).name(fakeName).build();

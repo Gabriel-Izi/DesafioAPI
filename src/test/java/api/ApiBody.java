@@ -9,9 +9,8 @@ import java.util.List;
 public class ApiBody {
 
     Faker faker = new Faker();
-
+//Metodos de Users da API Petstore------------------------------------------------------------------------------------------
     public CriandoUsuarioLombok criandoUser(){
-
         return CriandoUsuarioLombok.builder()
                 .id(faker.number().numberBetween(10000, 20000))
                 .username(faker.leagueOfLegends().champion())
@@ -24,6 +23,20 @@ public class ApiBody {
                 .build();
     }
 
+    public UsuarioInvalidoLombok criandoUserInvalido(){
+        return UsuarioInvalidoLombok.builder()
+                .id(faker.animal().name())
+                .username(faker.leagueOfLegends().champion())
+                .firstName(faker.name().firstName())
+                .lastName(faker.name().lastName())
+                .email(999)
+                .password(faker.internet().password())
+                .phone(faker.phoneNumber().cellPhone())
+                .userStatus(faker.internet().emailAddress())
+                .build();
+    }
+
+//Metodos de Pets da API Petstore----------------------------------------------------------------------------------------
     public PetsLombok configurandoPets(){
 
         return PetsLombok.builder()
@@ -72,6 +85,22 @@ public class ApiBody {
         tags.add(tag);
 
         return tags;
+    }
+
+//Metodos API JSONPlaceHolder-----------------------------------------------------------------------------------------
+    public PublicacaoLombok criandoPublicacao(){
+
+        return PublicacaoLombok.builder()
+                .userId(1)
+                .id(1)
+                .title("sunt aut facere repellat provident occaecati excepturi optio reprehenderit")
+                .body("""
+                        quia et suscipit
+                        suscipit recusandae consequuntur expedita et cum
+                        reprehenderit molestiae ut ut quas totam
+                        nostrum rerum est autem sunt rem eveniet architecto""")
+                .build();
+
     }
 
 }

@@ -80,8 +80,7 @@ font-src * data: blob: 'unsafe-inline';"/>
       "steps.Hooks.before(io.cucumber.java.Scenario)",
       "que tenho dados de acesso validos na API Petstore",
       "crio um pet",
-      "modifico esse pet",
-      "deve retornar as informacoes do pet modificado",
+      "deve retornar as informacoes do pet criado",
       "o status code da request Petstore deve ser 200",
       "steps.Hooks.after()"
     ],
@@ -91,13 +90,11 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           1,
-          1,
           0,
           0,
           0
         ],
         "backgroundColor": [
-          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
@@ -115,11 +112,9 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          0,
           0
         ],
         "backgroundColor": [
-          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
@@ -137,11 +132,9 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          0,
           0
         ],
         "backgroundColor": [
-          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
@@ -278,7 +271,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-03 17:22:33</span>
+            <span class="text-light">2022-01-17 12:07:34</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -288,7 +281,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <a href="pages/feature-scenarios/feature_1.html">Criar, modificar e deletar pets</a>
                         <span class="small">file:src/test/resources/Features/pets.feature</span>
                     </h5>
-                    <h3>Modificar pet API Petstore</h3>
+                    <h3>Criar pets na API Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -306,15 +299,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-03 17:21:56</li>
-                <li class="list-group-item">Ended on:<br>2022-01-03 17:21:58</li>
-            <li class="list-group-item">Test Runtime:<br>0m 02s 307ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-17 12:06:57</li>
+                <li class="list-group-item">Ended on:<br>2022-01-17 12:06:58</li>
+            <li class="list-group-item">Test Runtime:<br>0m 01s 320ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_petsPut.html">@petsPut</a>            </li>
+                    <a href="pages/tag-scenarios/tag_petsPost.html">@petsPost</a>            </li>
             </div>
         </div>
     </div>
@@ -324,11 +317,11 @@ font-src * data: blob: 'unsafe-inline';"/>
             <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                    5         Steps
+                    4         Steps
 
                 </li>
                 <li class="list-group-item">
-                    5 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    4 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
@@ -380,11 +373,11 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <span class="text-left">2.</span>
                                 <span data-toggle="tooltip" title="steps.PetsSteps.crio_um_pet()">
                                     <a href="pages/step-scenarios/step_1421594880.html"><span
-                                                class="keyword">E </span> crio um pet</a>
+                                                class="keyword">Quando </span> crio um pet</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 085ms
+                                0m 01s 274ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -393,21 +386,21 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"worm","id":10236,"category":{"name":"worm","id":10236},"tags":[{"name":"worm","id":10236}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+{"name":"dolphin","id":10116,"category":{"name":"dolphin","id":10116},"tags":[{"name":"dolphin","id":10116}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "id": 10236,
+    "id": 10116,
     "category": {
-        "id": 10236,
-        "name": "worm"
+        "id": 10116,
+        "name": "dolphin"
     },
-    "name": "worm",
+    "name": "dolphin",
     "photoUrls": [
         
     ],
     "tags": [
         {
-            "id": 10236,
-            "name": "worm"
+            "id": 10116,
+            "name": "dolphin"
         }
     ],
     "status": "available"
@@ -419,66 +412,25 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.modificoEssePet()">
-                                    <a href="pages/step-scenarios/step_225028519.html"><span
-                                                class="keyword">Quando </span> modifico esse pet</a>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.deve_retornar_as_informacoes_do_pet_criado()">
+                                    <a href="pages/step-scenarios/step_2019044739.html"><span
+                                                class="keyword">Então </span> deve retornar as informacoes do pet criado</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 173ms
+                                0m 00s 046ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>PUT https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"raven","id":10236,"category":{"name":"raven","id":10236},"tags":[{"name":"raven","id":10236}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
-{
-    "id": 10236,
-    "category": {
-        "id": 10236,
-        "name": "raven"
-    },
-    "name": "raven",
-    "photoUrls": [
-        
-    ],
-    "tags": [
-        {
-            "id": 10236,
-            "name": "raven"
-        }
-    ],
-    "status": "available"
-}<br><br>Tempo de resposta: 1 segundos</div>
-        </div>
                         </div>
 
 
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">4.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.deveRetornarAsInformacoesDoPetModificado()">
-                                    <a href="pages/step-scenarios/step_177879732.html"><span
-                                                class="keyword">Então </span> deve retornar as informacoes do pet modificado</a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 047ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-9 text-left">
-                                <span class="text-left">5.</span>
                                 <span data-toggle="tooltip" title="steps.PetsSteps.oStatusCodeDaRequestPetstoreDeveSer(java.lang.Integer)">
                                     <a href="pages/step-scenarios/step_01747636482.html"><span
                                                 class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">200</span></a>
@@ -504,7 +456,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-17 12:07:34.</span>
     </div>
 </footer>    </body>
     </html>

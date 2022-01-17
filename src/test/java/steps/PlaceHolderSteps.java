@@ -30,10 +30,11 @@ public class PlaceHolderSteps extends ApiRequests {
 
     }
 
-    @Quando("modifico dados em uma publicacao")
-    public void modifico_dados_em_uma_publicacao() {
+    @Quando("modifico um dado de uma publicacao")
+    public void modifico_um_dado_de_uma_publicacao() {
 
-        super.uri = prop.getProp("uri_placeholder");
+        super.uri = prop.getProp("uri_placeholder")+"1";
+//        super.id = "1";
 
         publicacaoEnviada = apiBody.criandoPublicacao();
         publicacaoEnviada.setBody(faker.leagueOfLegends().quote());
@@ -57,4 +58,86 @@ public class PlaceHolderSteps extends ApiRequests {
 
     }
 
+//Post---------------------------------------------------------------------------------------------------------------
+    @Quando("crio uma publicacao")
+    public void crioUmaPublicacao() {
+
+        super.uri = prop.getProp("uri_placeholder");
+
+        publicacaoEnviada = apiBody.criandoPublicacao();
+        publicacaoEnviada.setId(101);
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoEnviada));
+        super.POST();
+
+    }
+
+    @Então("deve retornar a publicacao com dados criados")
+    public void deveRetornarAPublicacaoComDadosCriados() {
+
+        assertEquals(publicacaoEnviada, response.jsonPath().getObject("", PublicacaoLombok.class));
+
+    }
+
+//Put-----------------------------------------------------------------------------------------------------------------
+    @Quando("modifico uma publicacao")
+    public void modificoUmaPublicacao() {
+
+        super.uri = prop.getProp("uri_placeholder")+"1";
+//        super.id = "1";
+
+        publicacaoEnviada = apiBody.criandoPublicacao();
+        publicacaoEnviada.setBody(faker.leagueOfLegends().quote());
+        publicacaoEnviada.setUserId(123);
+        publicacaoEnviada.setTitle(faker.leagueOfLegends().summonerSpell());
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoEnviada));
+        super.PUT();
+
+    }
+
+    @Então("deve retornar a publicacao com dados modificados")
+    public void deveRetornarAPublicacaoComDadosModificados() {
+
+        deveRetornarAPublicacaoComDadosCriados();
+
+    }
+
+//Get-------------------------------------------------------------------------------------------------------------------
+    @Quando("busco uma publicacao pelo id")
+    public void buscoUmaPublicacaoPeloId() {
+
+        super.uri = prop.getProp("uri_placeholder");
+        super.id = "1";
+
+        publicacaoEnviada = apiBody.criandoPublicacao();
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoEnviada));
+        super.GET();
+    }
+
+    @Então("deve retornar a publicacao do id buscado")
+    public void deveRetornarAPublicacaoDoIdBuscado() {
+
+        deveRetornarAPublicacaoComDadosCriados();
+
+    }
+
+//Delete-----------------------------------------------------------------------------------------------------------
+    @Quando("deleto uma publicacao pelo id")
+    public void deletoUmaPublicacaoPeloId() {
+
+        super.uri = prop.getProp("uri_placeholder");
+        super.id = "1";
+
+        super.DELETE();
+
+    }
+
+    @Então("deve retornar uma resposta vazia")
+    public void deveRetornarUmaRespostaVazia() {
+
+        assertEquals("[:]", response.jsonPath().getString(""));
+
+    }
 }

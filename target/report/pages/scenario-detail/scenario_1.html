@@ -78,11 +78,11 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
-      "que tenho dados de acesso validos",
+      "que tenho dados de acesso validos na API Marvel",
       "busco um personagem existente pelo \"1009262\"",
       "o \"Daredevil\" deve ser retornado",
       "esse personagem deve participar do evento \"Civil War\"",
-      "o status code da request deve ser 200",
+      "o status code da request Marvel deve ser 200",
       "steps.Hooks.after()"
     ],
     "datasets": [
@@ -90,7 +90,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
-          2,
+          4,
           0,
           0,
           0,
@@ -175,7 +175,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 2,
+            "stepSize": 4,
             "display": true
           },
           "stacked": true,
@@ -278,7 +278,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-03 17:22:33</span>
+            <span class="text-light">2022-01-17 12:07:34</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -306,9 +306,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-03 17:21:48</li>
-                <li class="list-group-item">Ended on:<br>2022-01-03 17:21:51</li>
-            <li class="list-group-item">Test Runtime:<br>0m 03s 522ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-17 12:06:46</li>
+                <li class="list-group-item">Ended on:<br>2022-01-17 12:06:51</li>
+            <li class="list-group-item">Test Runtime:<br>0m 04s 708ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
@@ -357,13 +357,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.MarvelSteps.queTenhoDadosDeAcessoValidos()">
-                                    <a href="pages/step-scenarios/step_02124765672.html"><span
-                                                class="keyword">Dado </span> que tenho dados de acesso validos</a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.queTenhoDadosDeAcessoValidosNaAPIMarvel()">
+                                    <a href="pages/step-scenarios/step_01815388338.html"><span
+                                                class="keyword">Dado </span> que tenho dados de acesso validos na API Marvel</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 015ms
+                                0m 00s 051ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -382,7 +382,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 02s 968ms
+                                0m 04s 104ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -391,14 +391,14 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>GET https://gateway.marvel.com/v1/public/characters/1009262<br><br>Body : 
-null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea21557c7a0e750b4a34fbe0d, ts=1641241308193}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=a489c06dde47abc17605dc183a5b9c32, ts=1642432006616}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
     "code": 200,
     "status": "Ok",
     "copyright": "© 2022 MARVEL",
     "attributionText": "Data provided by Marvel. © 2022 MARVEL",
     "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2022 MARVEL</a>",
-    "etag": "1caab98bd95aa32ead131d98e730ba946771507a",
+    "etag": "a2d265fcfd07647872ad85fcb724ab4e4ed05e90",
     "data": {
         "offset": 0,
         "limit": 20,
@@ -543,12 +543,12 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
                             "name": "Astonishing Tales (2009)"
                         },
                         {
-                            "resourceURI": "http://gateway.marvel.com/v1/public/series/354",
-                            "name": "Avengers (1998 - 2004)"
-                        },
-                        {
                             "resourceURI": "http://gateway.marvel.com/v1/public/series/1991",
                             "name": "Avengers (1963 - 1996)"
+                        },
+                        {
+                            "resourceURI": "http://gateway.marvel.com/v1/public/series/354",
+                            "name": "Avengers (1998 - 2004)"
                         },
                         {
                             "resourceURI": "http://gateway.marvel.com/v1/public/series/1988",
@@ -590,7 +590,7 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
                     "returned": 20
                 },
                 "stories": {
-                    "available": 1889,
+                    "available": 1890,
                     "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009262/stories",
                     "items": [
                         {
@@ -788,7 +788,7 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
             }
         ]
     }
-}<br><br>Tempo de resposta: 1 segundos</div>
+}<br><br>Tempo de resposta: 3 segundos</div>
         </div>
                         </div>
 
@@ -802,7 +802,7 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 500ms
+                                0m 00s 521ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -821,7 +821,7 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 037ms
+                                0m 00s 031ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -834,9 +834,9 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">5.</span>
-                                <span data-toggle="tooltip" title="steps.MarvelSteps.o_status_code_da_request_deve_ser(java.lang.Integer)">
-                                    <a href="pages/step-scenarios/step_107397765.html"><span
-                                                class="keyword">E </span> o status code da request deve ser <span class="parameter">200</span></a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.o_status_code_da_request_marvel_deve_ser(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1572496613.html"><span
+                                                class="keyword">E </span> o status code da request Marvel deve ser <span class="parameter">200</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -859,7 +859,7 @@ null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=20f45f6ea215
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-17 12:07:34.</span>
     </div>
 </footer>    </body>
     </html>

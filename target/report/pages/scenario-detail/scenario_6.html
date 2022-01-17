@@ -80,8 +80,8 @@ font-src * data: blob: 'unsafe-inline';"/>
       "steps.Hooks.before(io.cucumber.java.Scenario)",
       "que tenho dados de acesso validos na API Petstore",
       "crio um pet",
-      "deleto esse pet",
-      "deve retornar o id do pet deletado",
+      "modifico esse pet",
+      "deve retornar as informacoes do pet modificado",
       "o status code da request Petstore deve ser 200",
       "steps.Hooks.after()"
     ],
@@ -91,7 +91,7 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           1,
-          7,
+          2,
           0,
           0,
           0
@@ -175,7 +175,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 7,
+            "stepSize": 2,
             "display": true
           },
           "stacked": true,
@@ -278,7 +278,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-03 17:22:33</span>
+            <span class="text-light">2022-01-17 12:07:34</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -288,7 +288,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <a href="pages/feature-scenarios/feature_1.html">Criar, modificar e deletar pets</a>
                         <span class="small">file:src/test/resources/Features/pets.feature</span>
                     </h5>
-                    <h3>Deletar pet API Petstore</h3>
+                    <h3>Modificar pet API Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -306,15 +306,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-03 17:21:58</li>
-                <li class="list-group-item">Ended on:<br>2022-01-03 17:22:08</li>
-            <li class="list-group-item">Test Runtime:<br>0m 09s 210ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-17 12:06:58</li>
+                <li class="list-group-item">Ended on:<br>2022-01-17 12:07:02</li>
+            <li class="list-group-item">Test Runtime:<br>0m 03s 964ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_petsDelete.html">@petsDelete</a>            </li>
+                    <a href="pages/tag-scenarios/tag_petsPut.html">@petsPut</a>            </li>
             </div>
         </div>
     </div>
@@ -384,7 +384,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 202ms
+                                0m 01s 373ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -393,21 +393,21 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+{"name":"louse","id":10271,"category":{"name":"louse","id":10271},"tags":[{"name":"louse","id":10271}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "id": 16960,
+    "id": 10271,
     "category": {
-        "id": 16960,
-        "name": "koala"
+        "id": 10271,
+        "name": "louse"
     },
-    "name": "koala",
+    "name": "louse",
     "photoUrls": [
         
     ],
     "tags": [
         {
-            "id": 16960,
-            "name": "koala"
+            "id": 10271,
+            "name": "louse"
         }
     ],
     "status": "available"
@@ -419,13 +419,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.deletoEssePet()">
-                                    <a href="pages/step-scenarios/step_02113908504.html"><span
-                                                class="keyword">Quando </span> deleto esse pet</a>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.modificoEssePet()">
+                                    <a href="pages/step-scenarios/step_225028519.html"><span
+                                                class="keyword">Quando </span> modifico esse pet</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 07s 992ms
+                                0m 02s 553ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -433,21 +433,26 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </div>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/16960<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
-<br><br>Tempo de resposta: 2 segundos<br><br> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/16960<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
-<br><br>Tempo de resposta: 1 segundos<br><br> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/16960<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
-<br><br>Tempo de resposta: 1 segundos<br><br> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/16960<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
-<br><br>Tempo de resposta: 1 segundos<br><br> ****** Dados enviados no request ******<br><br>DELETE https://petstore.swagger.io/v2/pet/16960<br><br>Body : 
-{"name":"koala","id":16960,"category":{"name":"koala","id":16960},"tags":[{"name":"koala","id":16960}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>PUT https://petstore.swagger.io/v2/pet/null<br><br>Body : 
+{"name":"sheep","id":10271,"category":{"name":"sheep","id":10271},"tags":[{"name":"sheep","id":10271}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "code": 200,
-    "type": "unknown",
-    "message": "16960"
-}<br><br>Tempo de resposta: 1 segundos</div>
+    "id": 10271,
+    "category": {
+        "id": 10271,
+        "name": "sheep"
+    },
+    "name": "sheep",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        {
+            "id": 10271,
+            "name": "sheep"
+        }
+    ],
+    "status": "available"
+}<br><br>Tempo de resposta: 2 segundos</div>
         </div>
                         </div>
 
@@ -455,13 +460,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">4.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.deveRetornarOIdDoPetDeletado()">
-                                    <a href="pages/step-scenarios/step_2019778633.html"><span
-                                                class="keyword">Então </span> deve retornar o id do pet deletado</a>
+                                <span data-toggle="tooltip" title="steps.PetsSteps.deveRetornarAsInformacoesDoPetModificado()">
+                                    <a href="pages/step-scenarios/step_177879732.html"><span
+                                                class="keyword">Então </span> deve retornar as informacoes do pet modificado</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 015ms
+                                0m 00s 037ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -499,7 +504,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-17 12:07:34.</span>
     </div>
 </footer>    </body>
     </html>

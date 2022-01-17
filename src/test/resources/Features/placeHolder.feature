@@ -3,12 +3,41 @@
 #Version: 1.0
 #Encoding: UTF-8
 
-@placeholder @regressivo
-Funcionalidade: Atualizar publicações da API JsonPlaceHolder
-  Eu como administrador do sistema, quero alterar publicações
+@placeHolder @regressivo
+Funcionalidade: Criar, modificar e deletar publicações da API JsonPlaceHolder
+  Eu como administrador do sistema, quero gerenciar publicações
 
-  Cenário: Atualizar dados de uma publicacao na API JSONPlaceHolder
+@patchPlaceHolder
+  Cenário: Atualizar um dado especifico de uma publicacao na API JSONPlaceHolder
     Dado que tenho dados de acesso validos na API JSONPlaceHolder
-    Quando modifico dados em uma publicacao
+    Quando modifico um dado de uma publicacao
     Então deve retornar a publicacao com dados alterados
+    E o status code da request JSONPlaceHolder deve ser 200
+
+@postPlaceHolder
+  Cenário: Criar uma publicacao na API JSONPlaceHolder
+    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+    Quando crio uma publicacao
+    Então deve retornar a publicacao com dados criados
+    E o status code da request JSONPlaceHolder deve ser 201
+
+@putPlaceHolder
+  Cenário: Modificar uma publicacao na API JSONPlaceHolder
+    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+    Quando modifico uma publicacao
+    Então deve retornar a publicacao com dados modificados
+    E o status code da request JSONPlaceHolder deve ser 200
+
+@getPlaceHolder
+  Cenário: Buscar uma publicacao na API JSONPlaceHolder
+    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+    Quando busco uma publicacao pelo id
+    Então deve retornar a publicacao do id buscado
+    E o status code da request JSONPlaceHolder deve ser 200
+
+@deletePlaceHolder
+  Cenário: Deletar uma publicacao na API JSONPlaceHolder
+    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+    Quando deleto uma publicacao pelo id
+    Então deve retornar uma resposta vazia
     E o status code da request JSONPlaceHolder deve ser 200

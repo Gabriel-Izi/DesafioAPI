@@ -78,10 +78,10 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
-      "que tenho dados de acesso validos na API Petstore",
-      "crio um pet",
-      "deve retornar as informacoes do pet criado",
-      "o status code da request Petstore deve ser 200",
+      "que tenho dados de acesso validos na API Marvel",
+      "busco um personagem com id invalido",
+      "deve retornar uma mensagem de erro \"We couldn\u0027t find that character\"",
+      "o status code da request Marvel deve ser 404",
       "steps.Hooks.after()"
     ],
     "datasets": [
@@ -271,17 +271,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-03 17:22:33</span>
+            <span class="text-light">2022-01-17 12:07:34</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_1.html">Criar, modificar e deletar pets</a>
-                        <span class="small">file:src/test/resources/Features/pets.feature</span>
+                            <a href="pages/feature-scenarios/feature_0.html">Busca de personagens</a>
+                        <span class="small">file:src/test/resources/Features/marvel.feature</span>
                     </h5>
-                    <h3>Criar pets na API Petstore</h3>
+                    <h3>Buscar um personagem com id inválido na API Marvel</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -299,15 +299,13 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-03 17:21:54</li>
-                <li class="list-group-item">Ended on:<br>2022-01-03 17:21:56</li>
-            <li class="list-group-item">Test Runtime:<br>0m 01s 698ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-17 12:06:55</li>
+                <li class="list-group-item">Ended on:<br>2022-01-17 12:06:57</li>
+            <li class="list-group-item">Test Runtime:<br>0m 01s 472ms</li>
             <li class="list-group-item">
-                    <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
-
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_petsPost.html">@petsPost</a>            </li>
+                    <a href="pages/tag-scenarios/tag_negativoMarvel.html">@negativoMarvel</a>            </li>
             </div>
         </div>
     </div>
@@ -352,13 +350,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.que_tenho_dados_de_acesso_validos_na_api_petstore()">
-                                    <a href="pages/step-scenarios/step_1988702256.html"><span
-                                                class="keyword">Dado </span> que tenho dados de acesso validos na API Petstore</a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.queTenhoDadosDeAcessoValidosNaAPIMarvel()">
+                                    <a href="pages/step-scenarios/step_01815388338.html"><span
+                                                class="keyword">Dado </span> que tenho dados de acesso validos na API Marvel</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 030ms
+                                0m 00s 000ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -371,13 +369,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">2.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.crio_um_pet()">
-                                    <a href="pages/step-scenarios/step_1421594880.html"><span
-                                                class="keyword">Quando </span> crio um pet</a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.buscoUmPersonagemComIdInvalido()">
+                                    <a href="pages/step-scenarios/step_2125831930.html"><span
+                                                class="keyword">Quando </span> busco um personagem com id invalido</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 620ms
+                                0m 01s 457ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -385,25 +383,11 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </div>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"fox","id":16707,"category":{"name":"fox","id":16707},"tags":[{"name":"fox","id":16707}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+            <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>GET https://gateway.marvel.com/v1/public/characters/-515<br><br>Body : 
+null<br><br>Params : {apikey=14210d87d44432ce583250fb4385fd73, hash=65881e5343c9a9a8059892a9066c7cea, ts=1642432015552}<br><br> ****** Dados Recebidos ******<br><br>Status code: 404<br><br>Payload recebido: 
 {
-    "id": 16707,
-    "category": {
-        "id": 16707,
-        "name": "fox"
-    },
-    "name": "fox",
-    "photoUrls": [
-        
-    ],
-    "tags": [
-        {
-            "id": 16707,
-            "name": "fox"
-        }
-    ],
-    "status": "available"
+    "code": 404,
+    "status": "We couldn't find that character"
 }<br><br>Tempo de resposta: 1 segundos</div>
         </div>
                         </div>
@@ -412,13 +396,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.deve_retornar_as_informacoes_do_pet_criado()">
-                                    <a href="pages/step-scenarios/step_2019044739.html"><span
-                                                class="keyword">Então </span> deve retornar as informacoes do pet criado</a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.deveRetornarUmaMensagemDeErro(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01109452350.html"><span
+                                                class="keyword">Então </span> deve retornar uma mensagem de erro <span class="parameter">"We couldn't find that character"</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 046ms
+                                0m 00s 015ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -431,9 +415,9 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">4.</span>
-                                <span data-toggle="tooltip" title="steps.PetsSteps.oStatusCodeDaRequestPetstoreDeveSer(java.lang.Integer)">
-                                    <a href="pages/step-scenarios/step_01747636482.html"><span
-                                                class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">200</span></a>
+                                <span data-toggle="tooltip" title="steps.MarvelSteps.o_status_code_da_request_marvel_deve_ser(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1572496613.html"><span
+                                                class="keyword">E </span> o status code da request Marvel deve ser <span class="parameter">404</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -456,7 +440,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-03 17:22:33.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-17 12:07:34.</span>
     </div>
 </footer>    </body>
     </html>

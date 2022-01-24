@@ -9,6 +9,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.json.JSONObject;
+import user.PublicacaoInvalidaLombok;
 import user.PublicacaoLombok;
 import utils.PropertiesUtils;
 
@@ -20,6 +21,7 @@ public class PlaceHolderSteps extends ApiRequests {
     ApiHeaders apiHeaders = new ApiHeaders();
     ApiBody apiBody = new ApiBody();
     PublicacaoLombok publicacaoEnviada;
+    PublicacaoInvalidaLombok publicacaoInvalidaEnviada;
     Faker faker = new Faker();
 
 //Patch------------------------------------------------------------------------------------------------------------
@@ -138,6 +140,86 @@ public class PlaceHolderSteps extends ApiRequests {
     public void deveRetornarUmaRespostaVazia() {
 
         assertEquals("[:]", response.jsonPath().getString(""));
+
+    }
+
+//negativoPatchPlaceHolder---------------------------------------------------------------------------------------------
+    //erro na API
+    //está aceitando string no lugar de int e vice-versa
+    //não retorna nenhuma mensagem de erro e devolve o status code 200
+    @Quando("modifico um dado de uma publicacao com um dado invalido")
+    public void modificoUmDadoDeUmaPublicacaoComUmDadoInvalido() {
+
+        super.uri = prop.getProp("uri_placeholder")+"1";
+
+        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+        super.PATCH();
+
+    }
+
+//negativoPostPlaceHolder-----------------------------------------------------------------------------------------------
+    //erro na API
+    //está aceitando string no lugar de int e vice-versa
+    //não retorna nenhuma mensagem de erro e devolve o status code 200
+    @Quando("crio uma publicacao invalida")
+    public void crioUmaPublicacaoInvalida() {
+
+        super.uri = prop.getProp("uri_placeholder");
+
+        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+        super.POST();
+
+    }
+
+//negativoPutPlaceHolder-----------------------------------------------------------------------------------------------
+    //erro na API
+    //está aceitando string no lugar de int e vice-versa
+    //não retorna nenhuma mensagem de erro e devolve o status code 200
+    @Quando("modifico uma publicacao com dados invalidos")
+    public void modificoUmaPublicacaoComDadosInvalidos() {
+
+        super.uri = prop.getProp("uri_placeholder")+"1";
+
+        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+
+        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+        super.PUT();
+
+    }
+
+//negativoGetPlaceHolder-----------------------------------------------------------------------------------------------
+    @Quando("busco uma publicacao por um id invalido")
+    public void buscoUmaPublicacaoPorUmIdInvalido() {
+
+        super.uri = prop.getProp("uri_placeholder");
+        super.id = "abc";
+
+        super.GET();
+
+    }
+
+    @Então("deve retornar uma publicacao vazia")
+    public void deveRetornarUmaPublicacaoVazia() {
+
+        assertEquals("[:]", response.jsonPath().getString(""));
+
+    }
+
+//negativoDeletePlaceHolder--------------------------------------------------------------------------------------------
+    //erro na API
+    //está aceitando string no lugar de int e vice-versa
+    //não retorna nenhuma mensagem de erro e devolve o status code 200
+    @Quando("tento deletar uma publicacao com id inexistente")
+    public void tentoDeletarUmaPublicacaoComIdInexistente() {
+
+        super.uri = prop.getProp("uri_placeholder");
+        super.id = "abc";
+
+        super.DELETE();
 
     }
 }

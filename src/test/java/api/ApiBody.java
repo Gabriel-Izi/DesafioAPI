@@ -103,4 +103,15 @@ public class ApiBody {
 
     }
 
+    public PublicacaoInvalidaLombok criandoPublicacaoInvalida(){
+
+        return PublicacaoInvalidaLombok.builder()
+                .userId("abc")
+                .id("abc")
+                .title(123)
+                .body(321)
+                .build();
+
+    }
+
 }

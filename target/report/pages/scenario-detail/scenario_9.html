@@ -82,7 +82,7 @@ font-src * data: blob: 'unsafe-inline';"/>
       "crio um pet",
       "modifico esse pet com dados invalidos",
       "deve retornar a mensagem \"invalid ID supplied\"",
-      "o status code da request Petstore deve ser 405",
+      "o status code da request Petstore deve ser 400",
       "steps.Hooks.after()"
     ],
     "datasets": [
@@ -278,7 +278,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-17 12:07:35</span>
+            <span class="text-light">2022-01-24 11:20:49</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -306,9 +306,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-17 12:07:06</li>
-                <li class="list-group-item">Ended on:<br>2022-01-17 12:07:08</li>
-            <li class="list-group-item">Test Runtime:<br>0m 02s 391ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-24 11:20:12</li>
+                <li class="list-group-item">Ended on:<br>2022-01-24 11:20:14</li>
+            <li class="list-group-item">Test Runtime:<br>0m 02s 175ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
@@ -384,7 +384,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 156ms
+                                0m 01s 019ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -393,21 +393,21 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>POST https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"snail","id":10288,"category":{"name":"snail","id":10288},"tags":[{"name":"snail","id":10288}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+{"name":"moose","id":19076,"category":{"name":"moose","id":19076},"tags":[{"name":"moose","id":19076}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "id": 10288,
+    "id": 19076,
     "category": {
-        "id": 10288,
-        "name": "snail"
+        "id": 19076,
+        "name": "moose"
     },
-    "name": "snail",
+    "name": "moose",
     "photoUrls": [
         
     ],
     "tags": [
         {
-            "id": 10288,
-            "name": "snail"
+            "id": 19076,
+            "name": "moose"
         }
     ],
     "status": "available"
@@ -425,7 +425,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 219ms
+                                0m 01s 133ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -434,21 +434,21 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2"> ****** Dados enviados no request ******<br><br>PUT https://petstore.swagger.io/v2/pet/null<br><br>Body : 
-{"name":"snail","id":-269,"category":{"name":"snail","id":-269},"tags":[{"name":"snail","id":-269}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
+{"name":"moose","id":-382,"category":{"name":"moose","id":-382},"tags":[{"name":"moose","id":-382}],"status":"available"}<br><br>Headers : {api_key=special-key, accept=application/json, Content-Type=application/json}<br><br> ****** Dados Recebidos ******<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "id": 9223372036854775807,
+    "id": 9223372000001100858,
     "category": {
-        "id": -269,
-        "name": "snail"
+        "id": -382,
+        "name": "moose"
     },
-    "name": "snail",
+    "name": "moose",
     "photoUrls": [
         
     ],
     "tags": [
         {
-            "id": -269,
-            "name": "snail"
+            "id": -382,
+            "name": "moose"
         }
     ],
     "status": "available"
@@ -466,7 +466,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 015ms
+                                0m 00s 022ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
@@ -493,7 +493,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <span class="text-left">5.</span>
                                 <span data-toggle="tooltip" title="steps.PetsSteps.oStatusCodeDaRequestPetstoreDeveSer(java.lang.Integer)">
                                     <a href="pages/step-scenarios/step_01747636482.html"><span
-                                                class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">405</span></a>
+                                                class="keyword">E </span> o status code da request Petstore deve ser <span class="parameter">400</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -516,7 +516,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-17 12:07:35.</span>
+        <span>Cluecumber Report Plugin version 2.7.1 - Report generated on 2022-01-24 11:20:49.</span>
     </div>
 </footer>    </body>
     </html>

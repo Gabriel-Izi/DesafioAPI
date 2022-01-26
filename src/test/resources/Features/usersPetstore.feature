@@ -51,5 +51,4 @@ Funcionalidade: Criar, modificar e deletar usuários
   Cenário: Deletar usuário inválido na API Petstore
     Dado que tenho dados de acesso validos de usuario na API Petstore
     Quando deleto um usuario com id invalido
-    Então deve retornar a mensagem de erro "Invalid username supplied"
-    E o status code da request userPetstore deve ser 400
+    Então o status code da request userPetstore deve ser 400

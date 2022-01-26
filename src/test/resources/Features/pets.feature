@@ -50,5 +50,4 @@ Funcionalidade: Criar, modificar e deletar pets
   Cenário: Deletar pet com id inválida API Petstore
     Dado que tenho dados de acesso validos na API Petstore
     Quando deleto um pet com id invalido
-    Então deve retornar a mensagem "Invalid ID supplied"
-    E o status code da request Petstore deve ser 400
+    Então o status code da request Petstore deve ser 400

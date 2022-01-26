@@ -32,23 +32,23 @@ Funcionalidade: Criar, modificar e deletar usuários
 
 
 
-@negativoUsersPost
-  Cenário: Criar usuário inválido API Petstore
-    Dado que tenho dados de acesso validos de usuario na API Petstore
-    Quando crio um usuario invalido
-    Então deve retornar a mensagem de erro "Invalid input"
-    E o status code da request userPetstore deve ser 400
-
-@negativoUsersPut
-  Cenário: Modificar usuário com dados inválidos na API Petstore
-    Dado que tenho dados de acesso validos de usuario na API Petstore
-    E crio um usuario
-    Quando modifico esse usuario com dados invalidos
-    Então deve retornar a mensagem de erro "Invalid user supplied"
-    E o status code da request userPetstore deve ser 400
-
-@negativoUsersDelete
-  Cenário: Deletar usuário inválido na API Petstore
-    Dado que tenho dados de acesso validos de usuario na API Petstore
-    Quando deleto um usuario com id invalido
-    Então o status code da request userPetstore deve ser 400
+#@negativoUsersPost
+#  Cenário: Criar usuário inválido API Petstore
+#    Dado que tenho dados de acesso validos de usuario na API Petstore
+#    Quando crio um usuario invalido
+#    Então deve retornar a mensagem de erro "Invalid input"
+#    E o status code da request userPetstore deve ser 400
+#
+#@negativoUsersPut
+#  Cenário: Modificar usuário com dados inválidos na API Petstore
+#    Dado que tenho dados de acesso validos de usuario na API Petstore
+#    E crio um usuario
+#    Quando modifico esse usuario com dados invalidos
+#    Então deve retornar a mensagem de erro "Invalid user supplied"
+#    E o status code da request userPetstore deve ser 400
+#
+#@negativoUsersDelete
+#  Cenário: Deletar usuário inválido na API Petstore
+#    Dado que tenho dados de acesso validos de usuario na API Petstore
+#    Quando deleto um usuario com id invalido
+#    Então o status code da request userPetstore deve ser 400

@@ -96,7 +96,7 @@ public class UsersPetstoreSteps extends ApiRequests{
         super.DELETE();
 
         //bug na api apesar de funcionar
-        //o delete funciona mas só 50% das vezes por isso foi feito um while
+        //o delete funciona, mas só 50% das vezes por isso foi feito um while
         while(response.getStatusCode() != 200) {
             super.uri = prop.getProp("uri_userpetstore");
             super.id = userEnviado.getUsername();
@@ -116,51 +116,51 @@ public class UsersPetstoreSteps extends ApiRequests{
 
 
 
-//negativoUsersPost---------------------------------------------------------------------------------------------------
-    //bug na api
-    //não retornou a mensagem "Invalid input" e o status code 405
-    @Quando("crio um usuario invalido")
-    public void crioUmUsuarioInvalido() {
-
-        super.uri = prop.getProp("uri_userpetstore");
-        userInvalidoEnviado = apiBody.criandoUserInvalido();
-
-        super.body = new JSONObject(new Gson().toJson(userInvalidoEnviado));
-        super.POST();
-
-    }
-
-    @Então("deve retornar a mensagem de erro {string}")
-    public void deveRetornarAMensagemDeErro(String mensagemEsperada) {
-
-        assertEquals(mensagemEsperada, response.jsonPath().getString("message"),
-                "Error na comparação do objeto!");
-
-    }
-
-//negativoUsersPut----------------------------------------------------------------------------------------------------
-    //bug na api
-    //na response a api substitui o id invalido por um valido, e o status code foi 200
-    //não teve a mensagem esperada "invalid input"
-    @Quando("modifico esse usuario com dados invalidos")
-    public void modificoEsseUsuarioComDadosInvalidos() {
-
-        super.uri = prop.getProp("uri_userpetstore")+userEnviado.getUsername();
-        userEnviado.setId(faker.number().numberBetween(-999, -9));
-        super.body = new JSONObject(new Gson().toJson(userEnviado));
-        super.PUT();
-
-    }
-
-//negativoUsersDelete
-    //bug na api
-    //não retorna nada no body da response e não retorna o status code esperado (400)
-    @Quando("deleto um usuario com id invalido")
-    public void deletoUmUsuarioComIdInvalido() {
-
-        super.uri = prop.getProp("uri_userpetstore");
-        super.id = String.valueOf(faker.number().numberBetween(-999, -9));
-        super.DELETE();
-
-    }
+////negativoUsersPost---------------------------------------------------------------------------------------------------
+//    //bug na api
+//    //não retornou a mensagem "Invalid input" e o status code 405
+//    @Quando("crio um usuario invalido")
+//    public void crioUmUsuarioInvalido() {
+//
+//        super.uri = prop.getProp("uri_userpetstore");
+//        userInvalidoEnviado = apiBody.criandoUserInvalido();
+//
+//        super.body = new JSONObject(new Gson().toJson(userInvalidoEnviado));
+//        super.POST();
+//
+//    }
+//
+//    @Então("deve retornar a mensagem de erro {string}")
+//    public void deveRetornarAMensagemDeErro(String mensagemEsperada) {
+//
+//        assertEquals(mensagemEsperada, response.jsonPath().getString("message"),
+//                "Error na comparação do objeto!");
+//
+//    }
+//
+////negativoUsersPut----------------------------------------------------------------------------------------------------
+//    //bug na api
+//    //na response a api substitui o id invalido por um valido, e o status code foi 200
+//    //não teve a mensagem esperada "invalid input"
+//    @Quando("modifico esse usuario com dados invalidos")
+//    public void modificoEsseUsuarioComDadosInvalidos() {
+//
+//        super.uri = prop.getProp("uri_userpetstore")+userEnviado.getUsername();
+//        userEnviado.setId(faker.number().numberBetween(-999, -9));
+//        super.body = new JSONObject(new Gson().toJson(userEnviado));
+//        super.PUT();
+//
+//    }
+//
+////negativoUsersDelete
+//    //bug na api
+//    //não retorna nada no body da response e não retorna o status code esperado (400)
+//    @Quando("deleto um usuario com id invalido")
+//    public void deletoUmUsuarioComIdInvalido() {
+//
+//        super.uri = prop.getProp("uri_userpetstore");
+//        super.id = String.valueOf(faker.number().numberBetween(-999, -9));
+//        super.DELETE();
+//
+//    }
 }

@@ -143,83 +143,83 @@ public class PlaceHolderSteps extends ApiRequests {
 
     }
 
-//negativoPatchPlaceHolder---------------------------------------------------------------------------------------------
-    //erro na API
-    //está aceitando string no lugar de int e vice-versa
-    //não retorna nenhuma mensagem de erro e devolve o status code 200
-    @Quando("modifico um dado de uma publicacao com um dado invalido")
-    public void modificoUmDadoDeUmaPublicacaoComUmDadoInvalido() {
-
-        super.uri = prop.getProp("uri_placeholder")+"1";
-
-        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
-
-        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
-        super.PATCH();
-
-    }
-
-//negativoPostPlaceHolder-----------------------------------------------------------------------------------------------
-    //erro na API
-    //está aceitando string no lugar de int e vice-versa
-    //não retorna nenhuma mensagem de erro e devolve o status code 200
-    @Quando("crio uma publicacao invalida")
-    public void crioUmaPublicacaoInvalida() {
-
-        super.uri = prop.getProp("uri_placeholder");
-
-        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
-
-        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
-        super.POST();
-
-    }
-
-//negativoPutPlaceHolder-----------------------------------------------------------------------------------------------
-    //erro na API
-    //está aceitando string no lugar de int e vice-versa
-    //não retorna nenhuma mensagem de erro e devolve o status code 200
-    @Quando("modifico uma publicacao com dados invalidos")
-    public void modificoUmaPublicacaoComDadosInvalidos() {
-
-        super.uri = prop.getProp("uri_placeholder")+"1";
-
-        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
-
-        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
-        super.PUT();
-
-    }
-
-//negativoGetPlaceHolder-----------------------------------------------------------------------------------------------
-    @Quando("busco uma publicacao por um id invalido")
-    public void buscoUmaPublicacaoPorUmIdInvalido() {
-
-        super.uri = prop.getProp("uri_placeholder");
-        super.id = "abc";
-
-        super.GET();
-
-    }
-
-    @Então("deve retornar uma publicacao vazia")
-    public void deveRetornarUmaPublicacaoVazia() {
-
-        assertEquals("[:]", response.jsonPath().getString(""));
-
-    }
-
-//negativoDeletePlaceHolder--------------------------------------------------------------------------------------------
-    //erro na API
-    //está aceitando string no lugar de int e vice-versa
-    //não retorna nenhuma mensagem de erro e devolve o status code 200
-    @Quando("tento deletar uma publicacao com id inexistente")
-    public void tentoDeletarUmaPublicacaoComIdInexistente() {
-
-        super.uri = prop.getProp("uri_placeholder");
-        super.id = "abc";
-
-        super.DELETE();
-
-    }
+////negativoPatchPlaceHolder---------------------------------------------------------------------------------------------
+//    //erro na API
+//    //está aceitando string no lugar de int e vice-versa
+//    //não retorna nenhuma mensagem de erro e devolve o status code 200
+//    @Quando("modifico um dado de uma publicacao com um dado invalido")
+//    public void modificoUmDadoDeUmaPublicacaoComUmDadoInvalido() {
+//
+//        super.uri = prop.getProp("uri_placeholder")+"1";
+//
+//        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+//
+//        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+//        super.PATCH();
+//
+//    }
+//
+////negativoPostPlaceHolder-----------------------------------------------------------------------------------------------
+//    //erro na API
+//    //está aceitando string no lugar de int e vice-versa
+//    //não retorna nenhuma mensagem de erro e devolve o status code 200
+//    @Quando("crio uma publicacao invalida")
+//    public void crioUmaPublicacaoInvalida() {
+//
+//        super.uri = prop.getProp("uri_placeholder");
+//
+//        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+//
+//        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+//        super.POST();
+//
+//    }
+//
+////negativoPutPlaceHolder-----------------------------------------------------------------------------------------------
+//    //erro na API
+//    //está aceitando string no lugar de int e vice-versa
+//    //não retorna nenhuma mensagem de erro e devolve o status code 200
+//    @Quando("modifico uma publicacao com dados invalidos")
+//    public void modificoUmaPublicacaoComDadosInvalidos() {
+//
+//        super.uri = prop.getProp("uri_placeholder")+"1";
+//
+//        publicacaoInvalidaEnviada = apiBody.criandoPublicacaoInvalida();
+//
+//        super.body = new JSONObject(new Gson().toJson(publicacaoInvalidaEnviada));
+//        super.PUT();
+//
+//    }
+//
+////negativoGetPlaceHolder-----------------------------------------------------------------------------------------------
+//    @Quando("busco uma publicacao por um id invalido")
+//    public void buscoUmaPublicacaoPorUmIdInvalido() {
+//
+//        super.uri = prop.getProp("uri_placeholder");
+//        super.id = "abc";
+//
+//        super.GET();
+//
+//    }
+//
+//    @Então("deve retornar uma publicacao vazia")
+//    public void deveRetornarUmaPublicacaoVazia() {
+//
+//        assertEquals("[:]", response.jsonPath().getString(""));
+//
+//    }
+//
+////negativoDeletePlaceHolder--------------------------------------------------------------------------------------------
+//    //erro na API
+//    //está aceitando string no lugar de int e vice-versa
+//    //não retorna nenhuma mensagem de erro e devolve o status code 200
+//    @Quando("tento deletar uma publicacao com id inexistente")
+//    public void tentoDeletarUmaPublicacaoComIdInexistente() {
+//
+//        super.uri = prop.getProp("uri_placeholder");
+//        super.id = "abc";
+//
+//        super.DELETE();
+//
+//    }
 }

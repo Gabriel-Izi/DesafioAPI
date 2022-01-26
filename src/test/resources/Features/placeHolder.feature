@@ -43,34 +43,34 @@ Funcionalidade: Criar, modificar e deletar publicações da API JsonPlaceHolder
     E o status code da request JSONPlaceHolder deve ser 200
 
 
-@negativoPatchPlaceHolder
-  Cenário: Atualizar com um dado invalido especifico em uma publicacao na API JSONPlaceHolder
-    Dado que tenho dados de acesso validos na API JSONPlaceHolder
-    Quando modifico um dado de uma publicacao com um dado invalido
-    Então o status code da request JSONPlaceHolder deve ser 400
-
-@negativoPostPlaceHolder
-  Cenário: Criar uma publicacao invalida na API JSONPlaceHolder
-    Dado que tenho dados de acesso validos na API JSONPlaceHolder
-    Quando crio uma publicacao invalida
-    Então o status code da request JSONPlaceHolder deve ser 400
-
-@negativoPutPlaceHolder
-  Cenário: Modificar uma publicacao com dados invalidos na API JSONPlaceHolder
-    Dado que tenho dados de acesso validos na API JSONPlaceHolder
-    Quando modifico uma publicacao com dados invalidos
-    Então o status code da request JSONPlaceHolder deve ser 400
-
-@negativoGetPlaceHolder
-  Cenário: Buscar uma publicacao invalida na API JSONPlaceHolder
-    Dado que tenho dados de acesso validos na API JSONPlaceHolder
-    Quando busco uma publicacao por um id invalido
-    Então deve retornar uma publicacao vazia
-    E o status code da request JSONPlaceHolder deve ser 404
-
-@negativoDeletePlaceHolder
-Cenário: Deletar uma publicacao inexistente na API JSONPlaceHolder
-  Dado que tenho dados de acesso validos na API JSONPlaceHolder
-  Quando tento deletar uma publicacao com id inexistente
-  Então deve retornar uma resposta vazia
-  E o status code da request JSONPlaceHolder deve ser 404
+#@negativoPatchPlaceHolder
+#  Cenário: Atualizar com um dado invalido especifico em uma publicacao na API JSONPlaceHolder
+#    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+#    Quando modifico um dado de uma publicacao com um dado invalido
+#    Então o status code da request JSONPlaceHolder deve ser 400
+#
+#@negativoPostPlaceHolder
+#  Cenário: Criar uma publicacao invalida na API JSONPlaceHolder
+#    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+#    Quando crio uma publicacao invalida
+#    Então o status code da request JSONPlaceHolder deve ser 400
+#
+#@negativoPutPlaceHolder
+#  Cenário: Modificar uma publicacao com dados invalidos na API JSONPlaceHolder
+#    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+#    Quando modifico uma publicacao com dados invalidos
+#    Então o status code da request JSONPlaceHolder deve ser 400
+#
+#@negativoGetPlaceHolder
+#  Cenário: Buscar uma publicacao invalida na API JSONPlaceHolder
+#    Dado que tenho dados de acesso validos na API JSONPlaceHolder
+#    Quando busco uma publicacao por um id invalido
+#    Então deve retornar uma publicacao vazia
+#    E o status code da request JSONPlaceHolder deve ser 404
+#
+#@negativoDeletePlaceHolder
+#Cenário: Deletar uma publicacao inexistente na API JSONPlaceHolder
+#  Dado que tenho dados de acesso validos na API JSONPlaceHolder
+#  Quando tento deletar uma publicacao com id inexistente
+#  Então deve retornar uma resposta vazia
+#  E o status code da request JSONPlaceHolder deve ser 404

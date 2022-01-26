@@ -10,5 +10,5 @@ jobs:
      - run: mvn test  
      - uses: actions/setup-java@v2
        with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'adopt'

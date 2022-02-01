@@ -30,6 +30,13 @@ Funcionalidade: Criar, modificar e deletar pets
     Então deve retornar o id do pet deletado
     E o status code da request Petstore deve ser 200
 
+@petsGet
+  Cenário: Buscar pet API Petstore
+    Dado que tenho dados de acesso validos na API Petstore
+    E crio um pet
+    Quando busco o pet criado
+    Então deve retornar as informacoes do pet encontrado
+    E o status code da request Petstore deve ser 200
 
 #@negativoPetsPost
 #  Cenário: Criação de pet inválida API Petstore

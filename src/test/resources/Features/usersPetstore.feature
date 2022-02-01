@@ -30,7 +30,13 @@ Funcionalidade: Criar, modificar e deletar usuários
     Então deve retornar o username do usuario deletado
     E o status code da request userPetstore deve ser 200
 
-
+@usersGet
+  Cenário: Buscar usuário API Petstore
+    Dado que tenho dados de acesso validos de usuario na API Petstore
+    E crio um usuario
+    Quando busco o usuario criado
+    Então deve retornar o id do usuario encontrado
+    E o status code da request userPetstore deve ser 200
 
 #@negativoUsersPost
 #  Cenário: Criar usuário inválido API Petstore

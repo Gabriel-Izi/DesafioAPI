@@ -17,7 +17,8 @@ public class RunTest {
 
     @AfterClass
     public static void report() throws IOException {//Comando para gerar o report da trivago
-        if (System.getProperty("os.name").equals("Windoes 10"))
+        if (System.getProperty("os.name").equals("Windows 10")){
             Runtime.getRuntime().exec("cmd.exe /c mvn cluecumber-report:reporting");
+        }
     }
 }

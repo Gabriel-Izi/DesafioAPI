@@ -114,6 +114,28 @@ public class UsersPetstoreSteps extends ApiRequests{
 
     }
 
+//Get-----------------------------------------------------------------------------------------------------------------
+    @Quando("busco o usuario criado")
+    public void buscoOUsuarioCriado() {
+
+        super.uri = prop.getProp("uri_userpetstore");
+        super.id = userEnviado.getUsername();
+        super.GET();
+
+        while(response.getStatusCode() != 200) {
+            super.uri = prop.getProp("uri_userpetstore");
+            super.id = userEnviado.getUsername();
+            super.GET();
+        }
+
+    }
+
+    @Então("deve retornar o id do usuario encontrado")
+    public void deveRetornarOIdDoUsuarioEncontrado() {
+
+        assertEquals(userEnviado, response.jsonPath().getObject("", CriandoUsuarioLombok.class));
+
+    }
 
 
 ////negativoUsersPost---------------------------------------------------------------------------------------------------

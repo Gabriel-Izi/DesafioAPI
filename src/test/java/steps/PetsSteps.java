@@ -116,6 +116,31 @@ public class PetsSteps extends ApiRequests {
 
     }
 
+//Get------------------------------------------------------------------------------------------------------------------
+    @Quando("busco o pet criado")
+    public void buscoOPetCriado() {
+
+        super.uri = prop.getProp("uri_petstore");
+        super.id = String.valueOf(petEnviado.getId());
+        super.GET();
+
+        while(response.getStatusCode() != 200) {
+            super.uri = prop.getProp("uri_petstore");
+            super.id = String.valueOf(petEnviado.getId());
+            super.GET();
+        }
+
+    }
+
+    @Então("deve retornar as informacoes do pet encontrado")
+    public void deveRetornarAsInformacoesDoPetEncontrado() {
+
+        //assertEquals(petEnviado, response.jsonPath().getObject("", PetsLombok.class));
+        assertEquals(petEnviado.getId().toString(), response.jsonPath().getString("id"));
+        assertEquals(petEnviado.getName(), response.jsonPath().getString("name"));
+
+    }
+
 ////negativoPost-------------------------------------------------------------------------------------------------------
 //    //bug na api
 //    //retorna mensagem "something bad happened" e status code 500
